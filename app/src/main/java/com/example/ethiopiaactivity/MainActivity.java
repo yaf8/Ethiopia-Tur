@@ -7,21 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button btnEast, btnSouth, btnNorth, btnWest, btnMiddle, btnEthiopia, btnSong;
+    FloatingActionButton btnEast, btnSouth, btnNorth, btnWest, btnMiddle, btnSong;
+    ExtendedFloatingActionButton btnEthiopia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         btnEthiopia = findViewById(R.id.btnEthiopia);
-        btnEast = findViewById(R.id.btnEast);
+        btnSong = findViewById(R.id.btnSong);
         btnNorth = findViewById(R.id.btnNorth);
         btnSouth = findViewById(R.id.btnSouth);
-        btnMiddle = findViewById(R.id.btnMiddle);
+        btnEast = findViewById(R.id.btnEast);
         btnWest = findViewById(R.id.btnWest);
-        btnSong = findViewById(R.id.btnSong);
+        btnMiddle = findViewById(R.id.btnMiddle);
 
         btnEast.setVisibility(View.INVISIBLE);
         btnSouth.setVisibility(View.INVISIBLE);

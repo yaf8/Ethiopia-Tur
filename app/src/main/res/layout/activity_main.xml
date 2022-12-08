@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textEthiopia"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Ethiopia"
+        android:background="#E6DDDD"
+        android:textColor="#FF0303"
+        android:textSize="35sp" />
+
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/r_ethiopian_flag_1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"/>-->
 
 
     <RelativeLayout
@@ -12,15 +31,15 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:layout_centerInParent="true"
-        android:background="@mipmap/ethiopia_regions">
+        android:background="@mipmap/ethiopia_regions_2">
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnNorth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="155dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="60dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
             android:textSize="11sp" />
@@ -29,8 +48,8 @@
             android:id="@+id/btnSouth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="360dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="400dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
             android:textSize="11sp" />
@@ -39,7 +58,7 @@
             android:id="@+id/btnEast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="260dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
@@ -49,7 +68,7 @@
             android:id="@+id/btnWest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="270dp"
+            android:layout_marginStart="240dp"
             android:layout_marginTop="273dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
@@ -59,29 +78,34 @@
             android:id="@+id/btnMiddle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="170dp"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="260dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
             android:textSize="11sp" />
 
         <TextView
+            android:id="@+id/textNationalAnthem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="National Anthems"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:layout_marginTop="80dp"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="National Anthem"
+            android:textAlignment="center"
+            android:textColor="#25C503"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnSong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_play_30"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="20dp"
-            android:layout_alignParentEnd="true"/>
+            android:layout_below="@id/textNationalAnthem"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_play_30" />
 
     </RelativeLayout>
 
@@ -90,6 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/relativeLayoutMap"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#393CF3"
         android:id="@+id/btnEthiopia"
