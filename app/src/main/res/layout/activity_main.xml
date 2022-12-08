@@ -6,16 +6,16 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textEthiopia"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:textStyle="bold"
-        android:gravity="center"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#070BE8"
+        android:id="@+id/btnEthiopia"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/ic_location_30"
         android:text="Ethiopia"
-        android:background="#E6DDDD"
-        android:textColor="#FF0303"
-        android:textSize="35sp" />
+        android:textColor="@color/white" />
 
     <!--<ImageView
         android:layout_width="wrap_content"
@@ -32,7 +32,6 @@
         android:layout_height="500dp"
         android:layout_centerInParent="true"
         android:background="@mipmap/ethiopia_regions_2">
-
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnNorth"
@@ -52,7 +51,7 @@
             android:layout_marginTop="400dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
-            android:textSize="11sp" />
+            android:textSize="11sp"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnEast"
@@ -109,17 +108,12 @@
 
     </RelativeLayout>
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayoutMap"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#393CF3"
-        android:id="@+id/btnEthiopia"
-        android:drawableEnd="@drawable/ic_location_30"
-        android:text="Ethiopia"
-        android:textColor="@color/white" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/ethiopian_flag"/>
+
+
 
 </RelativeLayout>

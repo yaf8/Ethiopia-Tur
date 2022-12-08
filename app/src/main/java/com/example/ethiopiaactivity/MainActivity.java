@@ -3,6 +3,7 @@ package com.example.ethiopiaactivity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         btnWest.setVisibility(View.INVISIBLE);
         btnMiddle.setVisibility(View.INVISIBLE);
 
+
+        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.ethiopian_national_antem);
+
         btnSouth.setOnClickListener(v -> {
             Intent intent = new Intent(this, SouthActivity.class);
             startActivity(intent);
@@ -54,7 +58,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         btnSong.setOnClickListener(v -> {
-
+            if(mPlayer.isPlaying())
+            {
+                mPlayer.pause();
+                btnSong.setImageResource(R.drawable.ic_play_30);
+            }
+            else
+            {
+                mPlayer.start();
+                btnSong.setImageResource(R.drawable.ic_pause_30);
+            }
         });
         btnEthiopia.setOnClickListener(v -> {
             if (btnNorth.getVisibility() == View.VISIBLE)
