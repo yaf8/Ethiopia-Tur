@@ -13,8 +13,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 
 public class NorthActivity extends AppCompatActivity {
 
-    private ExtendedFloatingActionButton btnTigray, btnAfar, btnAmhara;
-    TextView textDiscrption;
+    TextView textDescription;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -22,18 +21,17 @@ public class NorthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_north);
 
-        RelativeLayout relativeLayoutDiscription = findViewById(R.id.relativeLayoutDescription);
-        relativeLayoutDiscription.setVisibility(View.INVISIBLE);
+        RelativeLayout relativeLayoutDescription = findViewById(R.id.relativeLayoutDescription);
+        relativeLayoutDescription.setVisibility(View.INVISIBLE);
 
-
-        btnTigray = findViewById(R.id.btnTigray);
-        btnAfar = findViewById(R.id.btnAfar);
-        btnAmhara = findViewById(R.id.btnAmhara);
-        textDiscrption = findViewById(R.id.textDescription);
+        ExtendedFloatingActionButton btnTigray = findViewById(R.id.btnTigray);
+        ExtendedFloatingActionButton btnAfar = findViewById(R.id.btnAfar);
+        ExtendedFloatingActionButton btnAmhara = findViewById(R.id.btnAmhara);
+        textDescription = findViewById(R.id.textDescription);
 
         btnTigray.setOnClickListener(v -> {
-            relativeLayoutDiscription.setVisibility(View.VISIBLE);
-            textDiscrption.setText(" Tigray : \n\n The Tigray Region, officially the Tigray National Regional State, is the northernmost " +
+            relativeLayoutDescription.setVisibility(View.VISIBLE);
+            textDescription.setText(" Tigray : \n\n The Tigray Region, officially the Tigray National Regional State, is the northernmost " +
                     "regional state in Ethiopia. The Tigray Region is the homeland of the Tigrayan people. Formerly known as " +
                     "Region 1, its capital and largest city is Mekelle. \n\n" +
                     "Location : \n " +
@@ -55,8 +53,8 @@ public class NorthActivity extends AppCompatActivity {
                     " names (father's, grandfather's, etc.) remain the same.\n\n");
         });
         btnAfar.setOnClickListener(v -> {
-            relativeLayoutDiscription.setVisibility(View.VISIBLE);
-            textDiscrption.setText("Afar: \n\n" +
+            relativeLayoutDescription.setVisibility(View.VISIBLE);
+            textDescription.setText("Afar: \n\n" +
                     "The Afar, also known as the Danakil, Adali and Odali, are a Cushitic-speaking ethnic group inhabiting the Horn of Africa." +
                     "They primarily live in the Afar Region of Ethiopia and in northern Djibouti, as well as the entire southern coast of Eritrea." +
                     "The Afar Region (/ˈɑːfɑːr/; Afar: Qafar Rakaakayak; Amharic: አፋር ክልል), formerly known as Region 2, is a regional state in " +
@@ -68,12 +66,11 @@ public class NorthActivity extends AppCompatActivity {
                     "in the coastal areas and agriculturalists in the Assau oasis. The Afar also mine and export salt.\n" +
                     "Proud, highly individualistic, and much feared by outsiders, they are organized in patrilineal kin groups. Cooperation in larger units such as a subtribe or " +
                     "tribe is induced only by warfare against other tribes or neighbouring peoples. Two distinct classes, the Asaimara (“Red Men”) and the Adoimara (“White Men”), " +
-                    "constitute the landowning, titled nobles and the lower-class tenants, respectively.");
-
+                    "constitute the landowning, titled nobles and the lower-class tenants, respectively.\n\n");
         });
         btnAmhara.setOnClickListener(v -> {
-            relativeLayoutDiscription.setVisibility(View.VISIBLE);
-            textDiscrption.setText("Amhara: \n\n" +
+            relativeLayoutDescription.setVisibility(View.VISIBLE);
+            textDescription.setText("Amhara: \n\n" +
                     "The Amhara Region, officially the Amhara National Regional State, is a regional state in northern Ethiopia and the homeland of " +
                     "the Amhara people. Its capital is Bahir Dar which is the seat of the Regional Government of Amhara.\n Amhara, people of the Ethiopian " +
                     "central highlands. The Amhara are one of the two largest ethnolinguistic groups in Ethiopia (the other group being the Oromo). " +
@@ -87,8 +84,7 @@ public class NorthActivity extends AppCompatActivity {
                     "this dominance created competitive quarrels between the Amhara and their northern neighbours, the Tigray, and other Ethiopian ethnic " +
                     "groups, such as the Oromo. Tensions rose between the Amhara and the Oromo during the period of socialist rule (1974–91), as the Oromo " +
                     "claimed an increasingly prominent role in the nation’s social and political affairs. After 1991 a measure of Amhara sentiment was " +
-                    "directed against the Tigray, who had gained influence during the struggle against the Marxists.");
-
+                    "directed against the Tigray, who had gained influence during the struggle against the Marxists.\n\n");
         });
 
     }

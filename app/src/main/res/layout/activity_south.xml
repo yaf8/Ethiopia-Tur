@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,7 +7,8 @@
     tools:context=".NorthActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <TextView
             android:id="@+id/textSouthRegin"
@@ -18,8 +18,9 @@
             android:text="South Region"
             android:textAlignment="center"
             android:textColor="@color/purple_700"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <RelativeLayout
             android:id="@+id/relativeLayoutButtons"
@@ -33,9 +34,11 @@
                 android:id="@+id/btnOromia"
                 android:layout_height="wrap_content"
                 android:text="Oromia"
+                android:textStyle="bold"
                 android:textSize="20sp"
                 android:drawableEnd="@drawable/ic_location_30"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:layout_width="200dp"
@@ -44,9 +47,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnOromia"
                 android:text="SNNPR"
+                android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:drawableEnd="@drawable/ic_location_30"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:layout_width="200dp"
@@ -55,9 +60,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnSNNPR"
                 android:text="Sidama"
+                android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:drawableEnd="@drawable/ic_location_30"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
 
@@ -71,14 +78,14 @@
             android:layout_alignParentBottom="true">
 
             <ScrollView
-                android:id="@+id/scrollViewDiscription"
+                android:id="@+id/scrollViewDescription"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textDescription"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
@@ -86,12 +93,10 @@
                     android:text="Description"
                     android:textStyle="italic|bold"
                     android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
 
             </ScrollView>
-
         </RelativeLayout>
-
-
     </RelativeLayout>
 </LinearLayout>

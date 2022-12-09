@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             else
             {
                 mPlayer.start();
+                mPlayer.setLooping(true);
                 btnSong.setImageResource(R.drawable.ic_pause_30);
             }
         });

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@mipmap/background_flag_image"
@@ -8,7 +7,8 @@
     tools:context=".NorthActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <TextView
             android:id="@+id/textWestRegin"
@@ -18,8 +18,9 @@
             android:text="West Region"
             android:textAlignment="center"
             android:textColor="@color/purple_700"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <RelativeLayout
             android:id="@+id/relativeLayoutButtons"
@@ -34,9 +35,11 @@
                 android:id="@+id/btnGumuz"
                 android:layout_height="wrap_content"
                 android:text="Gumuz"
+                android:textStyle="bold"
                 android:textSize="20sp"
                 android:drawableEnd="@drawable/ic_location_30"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:layout_width="200dp"
@@ -45,13 +48,16 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnGumuz"
                 android:text="Gambela"
+                android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:drawableEnd="@drawable/ic_location_30"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/relativeLayoutDescription"
             android:layout_below="@+id/relativeLayoutButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,14 +66,14 @@
             android:layout_alignParentBottom="true">
 
             <ScrollView
-                android:id="@+id/scrollViewDiscription"
+                android:id="@+id/scrollViewDescription"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textDescription"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
@@ -75,11 +81,10 @@
                     android:text="Description"
                     android:textStyle="italic|bold"
                     android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
 
             </ScrollView>
-
         </RelativeLayout>
-
     </RelativeLayout>
 </LinearLayout>

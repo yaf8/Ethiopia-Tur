@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,16 +14,8 @@
         android:layout_marginTop="10dp"
         android:drawableEnd="@drawable/ic_location_30"
         android:text="Ethiopia"
-        android:textColor="@color/white" />
-
-    <!--<ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/r_ethiopian_flag_1"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"/>-->
-
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
 
     <RelativeLayout
         android:id="@+id/relativeLayoutMap"
@@ -41,7 +32,9 @@
             android:layout_marginTop="60dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:contentDescription="Hello World!"
+            tools:ignore="RelativeOverlap" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnSouth"
@@ -51,7 +44,9 @@
             android:layout_marginTop="400dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
-            android:textSize="11sp"/>
+            android:textSize="11sp"
+            android:contentDescription="Hello World!"
+            tools:ignore="RelativeOverlap"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnWest"
@@ -61,7 +56,9 @@
             android:layout_marginTop="260dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:contentDescription="Hello World!"
+            tools:ignore="RelativeOverlap" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnEast"
@@ -71,7 +68,9 @@
             android:layout_marginTop="273dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:contentDescription="Hello World!"
+            tools:ignore="RelativeOverlap" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnMiddle"
@@ -81,7 +80,9 @@
             android:layout_marginTop="260dp"
             android:backgroundTint="#2AC2F1"
             android:src="@drawable/ic_location_30"
-            android:textSize="11sp" />
+            android:textSize="11sp"
+            android:contentDescription="Hello World!"
+            tools:ignore="RelativeOverlap" />
 
         <TextView
             android:id="@+id/textNationalAnthem"
@@ -94,7 +95,8 @@
             android:textAlignment="center"
             android:textColor="#25C503"
             android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnSong"
@@ -104,7 +106,9 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="30dp"
-            android:src="@drawable/ic_play_30" />
+            android:src="@drawable/ic_play_30"
+            android:contentDescription="Hello World!"
+            tools:ignore="RelativeOverlap" />
 
     </RelativeLayout>
 
@@ -113,7 +117,5 @@
         android:layout_height="65dp"
         android:layout_alignParentBottom="true"
         android:background="@mipmap/ethiopian_flag"/>
-
-
 
 </RelativeLayout>
