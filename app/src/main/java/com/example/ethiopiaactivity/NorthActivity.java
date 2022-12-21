@@ -1,6 +1,7 @@
 package com.example.ethiopiaactivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -85,6 +86,13 @@ public class NorthActivity extends AppCompatActivity {
                     "groups, such as the Oromo. Tensions rose between the Amhara and the Oromo during the period of socialist rule (1974–91), as the Oromo " +
                     "claimed an increasingly prominent role in the nation’s social and political affairs. After 1991 a measure of Amhara sentiment was " +
                     "directed against the Tigray, who had gained influence during the struggle against the Marxists.\n\n");
+        });
+
+        btnTigray.setOnLongClickListener(v -> {
+            Intent intent = new Intent(this, TigrayActivity.class);
+            startActivity(intent);
+            finish();
+            return true;
         });
 
     }

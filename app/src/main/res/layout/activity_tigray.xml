@@ -1,9 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AfarActivity">
+    android:background="@mipmap/background_flag_image"
+    tools:context=".TigrayActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/imgbtnBack"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:src="@drawable/ic_arrow_back_30"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textTigray"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/custom_border"
+            android:gravity="center"
+            android:text="Tigray"
+            android:textAlignment="center"
+            android:textColor="@color/purple_700"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTigray"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btnPictures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:drawableLeft="@drawable/ic_location_30"
+                android:gravity="center"
+                android:paddingEnd="20dp"
+                android:text="pictures"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnComments"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="19dp"
+                android:drawableLeft="@drawable/ic_comment_30"
+                android:text="Comments"
+                android:textSize="15sp"
+                app:cornerRadius="20dp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollPictures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutButtons"
+            android:visibility="visible">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:columnCount="3">
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:background="@mipmap/tigray1"
+                    tools:ignore="ContentDescription"/>
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:background="@mipmap/tigray2"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:background="@mipmap/tigray3"
+                    tools:ignore="ContentDescription"/>
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@mipmap/tigray4"
+                    android:gravity="center"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@mipmap/tigray5"
+                    android:gravity="center"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@mipmap/tigray6"
+                    android:gravity="center"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@mipmap/tigray7"
+                    android:gravity="center"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@mipmap/tigray8"
+                    android:gravity="center"
+                    tools:ignore="ContentDescription"/>
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@mipmap/tigray9"
+                    android:gravity="center"
+                    tools:ignore="ContentDescription" />
+
+
+            </GridLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/scrollComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutButtons"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/custom_button"
+                    android:drawableLeft="@drawable/ic_email_24"
+                    android:gravity="center"
+                    android:hint="Email address"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="30dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp"
+                    tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextFields" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <EditText
+                        android:id="@+id/edtComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="120dp"
+                        android:background="@drawable/custom_button"
+                        android:drawableLeft="@drawable/ic_comment_24"
+                        android:gravity="center"
+                        android:hint="Comment"
+                        android:paddingStart="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="30dp"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextFields" />
+
+                    <Button
+                        android:id="@+id/btnPost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:backgroundTint="@color/teal_700"
+                        android:text="Post"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/studentRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_margin="10dp" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="40dp"
+                    android:text="Clear"
+                    android:backgroundTint="#FB0000"
+                    android:layout_gravity="center_horizontal"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</RelativeLayout>
